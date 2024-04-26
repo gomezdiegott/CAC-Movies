@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
 }
 
 /* Header para escritorio */
@@ -90,7 +94,7 @@ main {
 }
 
 main .banner {
-    background-image: url(../img/bnr\ io.jpeg);
+    background-image: url(../img/banner.avif);
     /* background-repeat: no-repeat; */
     background-position: center;
     background-size: cover;
@@ -123,17 +127,17 @@ main .banner .btn-register {
     border-radius: 7px;
     transition: 0.3s;
     cursor: pointer;
+    z-index: 100;
+}
+main .banner button:hover {
+    background-color: #9f3647;
+    transform: scale(0.95);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .btn-register a {
     text-decoration: none;
     color: #fff;
-}
-
-main .banner .btn-register:hover {
-    background-color: #9f3647;
-    transform: scale(0.95);
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 main .buscador {
@@ -258,7 +262,7 @@ main .cartelera {
 
 .cartelera .peliculas .peli:hover {
     transform: scale(0.90);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 5px 10px hsla(359, 96%, 50%, 0.3);
 }
 
 .cartelera .btn-ant-sig {
@@ -371,7 +375,7 @@ main .inicio a {
         font-weight: 500;
     }
     main .buscador .input-btn .search{
-        width: 290px;
+        width: 260px;
         height: 45px;
     }
     .buscador .input-btn button {
