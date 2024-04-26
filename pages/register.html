@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/register.css">
+    <title>Registrarse</title>
+</head>
+<body class="body-register">  
+    <header>
+        <div class="logo">
+            <a href="../index.html">
+                <span>C & D</span>
+            </a>
+        </div>
+    </header>
+    <main>
+
+        <div class="container">
+            
+            <form action="get">
+                <h2>Registro</h2>
+                <input type="text" name="name" id="name" placeholder="Nombre">
+                <br>
+                <input type="text" name="surname" id="surname" placeholder="Apellido">
+                <br>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <br>
+                <input type="password" name="password" id="password" placeholder="Contraseña">
+                <br>
+                <input type="date" name="date" id="date">
+                <br>
+                <div class="countrys">
+                    <select name="country" id="country">
+                        <option value>País</option>
+                        <option value="Ar">Argentina</option>
+                        <option value="Ch">Chile</option>
+                        <option value="Bo">Bolivia</option>
+                        <option value="Br">Brasil</option>
+                        <option value="Co">Colombia</option>
+                        <option value="Ec">Ecuador</option>
+                    </select>
+                </div>
+                <div class="terminos">
+                    <input class="check" type="checkbox" name="checkbox" id="terminos"> 
+                    <label for="terminos" class="textoCheck">Acepto términos y condiciones</label>
+                </div>
+                <div>
+                    <input type="submit" value="Registrarse" class="boton">   
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

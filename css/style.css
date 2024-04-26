@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header para escritorio */
+header {
+    background-color: #9f3647;
+    color: #fff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;/* 
+    flex-flow: row wrap; */
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+    padding: 1.5rem 0;
+}
+
+header nav .logo {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    /* flex-flow: row nowrap; */
+    align-items: center;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    margin-right: initial;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header nav ul li a:hover {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+}
+
+header nav ul li .iniciarSesion {
+    background-color: #000;
+    border-radius: 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    &:hover {
+        background-color: #9f3647;
+    }
+}
+
+/* Header para celular */
+
+@media (max-width:768px){
+    header {
+        height: initial;
+    } header nav {
+            margin: 0 10px;
+            flex-direction: column;
+            row-gap: 20px;
+            padding: initial;
+        } header nav ul li a {
+            font-weight: 400;
+            margin-right: initial;
+            font-size: 1rem;
+            padding: 0.2rem;
+        }
+}
+
+/* Main para escritorio */
+main {
+    background-color: #181419;
+}
+
+main .banner {
+    background-image: url(../img/bnr\ io.jpeg);
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+main .banner h1 {
+    font-size: 3.5rem;
+    font-weight: 650;
+    margin-bottom: 1rem;
+}
+
+main .banner h2 {
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+main .banner .btn-register {
+    background-color: #9f3647;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-register a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main .banner .btn-register:hover {
+    background-color: #9f3647;
+    transform: scale(0.95);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+main .buscador {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+.buscador .pregunta {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.buscador .input-btn {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.buscador .input-btn .search {
+    padding: 0 20px;
+    width: 500px;
+    height: 50px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    outline: none;
+}
+
+.buscador .input-btn button {
+    background-color: #9f3647;
+    padding: 0.7rem 1.5rem;
+    font-weight: 700;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    transition: 0.3s;
+    margin-left: 10px;
+}
+
+.buscador .input-btn button a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.buscador .input-btn button:hover {
+    background-color: #9f3647;
+    transform: scale(0.95);
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+main .cartelera {
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.cartelera .hr {
+    border: 1px solid #9f3647;
+    margin-top: 40px;
+}
+
+.cartelera h3 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.cartelera .peliculas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:60px;
+}
+
+.cartelera .peliculas .peli {
+    transition: all 0.5s;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/*  */
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+}
+
+.peli:hover .overlay {
+    opacity: 1;
+}
+
+.texto {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+/*  */
+
+.cartelera .peliculas .peli img {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    filter: blur(6px);
+}
+
+.cartelera .peliculas .peli:hover {
+    transform: scale(0.90);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cartelera .btn-ant-sig {
+    background-color: #9f3647;
+    padding: 1rem 1.2rem;
+    font-weight: 500;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    margin: 3rem 10px 5rem 10px;
+    transition: all 0.3s;
+    &:hover {
+        background-color: #9f3647;
+        transform: scale(0.95);
+        box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.cartelera .btn-ant-sig a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main .aclamadas {
+    text-align: center;
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.aclamadas h3 {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.aclamadas .pelis {
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 40px;
+    overflow: hidden;
+}
+
+.aclamadas .pelis .peli {
+    width: 160px;
+    height: 250px;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    filter: blur(0.5px);
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.aclamadas .pelis .peli img {
+    width: 160px;
+    height: 250px;
+    margin-bottom: 2rem;
+    border-radius: 7px;
+    filter: blur(6px);
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+main .inicio {
+    background-color: #9f3647;
+    border: 2px solid #000;
+    border-radius: 33px;
+    padding: 0rem 0.5rem;
+    margin: 20px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+main .inicio a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+/* Main para celular */
+
+@media (max-width: 770px) {
+    main .banner {
+        height: 60vh;
+    } 
+    main .banner h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+    main .banner h2 {
+        font-size: 1.5rem;
+        font-weight: 350;
+    }
+    main .banner .btn-register {
+        padding: 0.7rem 1.5rem;
+        font-weight: 500;
+    }
+    main .buscador {
+        height: 30vh;
+    }
+    .buscador .pregunta {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    main .buscador .input-btn .search{
+        width: 290px;
+        height: 45px;
+    }
+    .buscador .input-btn button {
+        background-color: #9f3647;
+        padding: 0rem 1.2rem;
+        font-weight: 500;
+        height: 45px;
+    }
+    .cartelera h3 {
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .cartelera .peliculas .peli {
+        width: 350px;
+        height: 500px;
+    }
+    .cartelera .peliculas .peli img {
+        width: 350px;
+        height: 500px;
+    }
+}
+
+/* Footer para escritorio */
+
+footer {
+    background-color: #9f3647;
+    padding: 3.2rem;
+}
+
+footer nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+footer nav ul li {
+    margin: 0px 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+footer nav ul li .adm-pelis {
+    padding: 0.5rem 1rem;
+    border-radius: 7px;
+    background-color: #000;
+}
+
+footer nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Footer para celular */
+
+@media (max-width: 770px) {
+    footer {
+        height: initial;
+        padding-top: 15px;
+        padding-bottom: 20px;
+    }
+    footer nav ul {
+        display: list-item;
+        text-align: center;
+    }
+    footer nav ul li {
+        font-size: 1rem;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+}
