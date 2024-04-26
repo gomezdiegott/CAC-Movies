@@ -253,7 +253,7 @@ main .cartelera {
     width: 200px;
     height: 300px;
     border-radius: 10px;
-    filter: blur(6px);
+    /* filter: blur(6px); */
 }
 
 .cartelera .peliculas .peli:hover {
@@ -321,7 +321,7 @@ main .aclamadas {
     height: 250px;
     margin-bottom: 2rem;
     border-radius: 7px;
-    filter: blur(6px);
+    /* filter: blur(6px); */
     &:hover {
         cursor: pointer;
     }
