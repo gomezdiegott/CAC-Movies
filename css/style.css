@@ -8,6 +8,33 @@
     font-family: "Nunito", sans-serif;
 }
 
+/* Scroll página */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgb(23, 23, 23);
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #9f3647;
+}
+
+/* Handle active */
+::-webkit-scrollbar-thumb:active {
+    cursor: grabbing;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:#9f3647;
+}
+
+
 /* Header para escritorio */
 header {
     background-color: #9f3647;
@@ -180,10 +207,6 @@ main .buscador {
     border-radius: 25px;
     transition: 0.3s;
     margin-left: 10px;
-}
-
-.buscador .input-btn button a {
-    text-decoration: none;
     color: #fff;
 }
 
@@ -265,7 +288,7 @@ main .cartelera {
     box-shadow: 3px 5px 10px hsla(359, 96%, 50%, 0.3);
 }
 
-.cartelera .btn-ant-sig {
+.cartelera .btn-ant, .cartelera .btn-sig {
     background-color: #9f3647;
     padding: 1rem 1.2rem;
     font-weight: 500;
@@ -273,6 +296,7 @@ main .cartelera {
     border-radius: 7px;
     margin: 3rem 10px 5rem 10px;
     transition: all 0.3s;
+    color: #fff;
     &:hover {
         background-color: #9f3647;
         transform: scale(0.95);
@@ -280,16 +304,12 @@ main .cartelera {
     }
 }
 
-.cartelera .btn-ant-sig a {
-    text-decoration: none;
-    color: #fff;
-}
-
 main .aclamadas {
     text-align: center;
     color: #fff;
     width: 80%;
     margin: 0 auto;
+    padding-bottom: 60px;
 }
 
 .aclamadas h3 {
@@ -306,7 +326,7 @@ main .aclamadas {
     align-items: center;
     flex-wrap: nowrap;
     gap: 40px;
-    overflow: hidden;
+    overflow-x: scroll;
 }
 
 .aclamadas .pelis .peli {
@@ -334,8 +354,8 @@ main .aclamadas {
 main .inicio {
     background-color: #9f3647;
     border: 2px solid #000;
-    border-radius: 33px;
-    padding: 0rem 0.5rem;
+    border-radius: 50%;
+    padding: 0.2rem 0.3rem;
     margin: 20px;
     position: fixed;
     right: 0;
@@ -345,8 +365,6 @@ main .inicio {
 main .inicio a {
     text-decoration: none;
     color: #000;
-    font-size: 1.3rem;
-    font-weight: 300;
 }
 
 /* Main para celular */
