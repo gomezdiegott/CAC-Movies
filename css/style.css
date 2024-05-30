@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 
 
 * {
@@ -50,7 +50,7 @@ header nav {
     flex-flow: row wrap; */
     justify-content: space-between;
     align-items: center;
-    margin: 0 20px;
+    margin: 0 40px;
     padding: 1.5rem 0;
 }
 
@@ -159,7 +159,7 @@ main .banner .btn-register {
 main .banner button:hover {
     background-color: #9f3647;
     transform: scale(0.95);
-    box-shadow:  0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow:  0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .btn-register a {
@@ -247,6 +247,7 @@ main .cartelera {
     width: 200px;
     height: 300px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /*  */
@@ -267,20 +268,20 @@ main .cartelera {
 
 .peli:hover .overlay {
     opacity: 1;
+    backdrop-filter: blur(2px);
 }
 
 .texto {
+    font-family: "Oswald", sans-serif;
     color: white;
-    font-size: 20px;
+    font-size: 1.5rem;
     text-align: center;
 }
-/*  */
 
 .cartelera .peliculas .peli img {
     width: 200px;
     height: 300px;
     border-radius: 10px;
-    /* filter: blur(6px); */
 }
 
 .cartelera .peliculas .peli:hover {

@@ -94,6 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
         validar = validarEmail('email', 'el correo electronico no es valido') && validar;
         // validar contraseña
         validar = validarCampo('password', 'la contraseña es obligatoria') && validar;
+        // validar nombre
+        validar = validarCampo('name', 'el nombre es obligatorio');
+        // validar apellido
+        validar = validarCampo('surname', 'el apellido es obligatorio');
+        // validar fecha de nacimiento
+        validar = validarCampo('date', 'la fecha de nacimiento es obligatorio');
 
         return validar;
 
@@ -112,3 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 })
+
+
+

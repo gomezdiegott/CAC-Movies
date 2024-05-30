@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&display=swap');
 
 * {
     margin: 0;
@@ -12,20 +12,22 @@
     background-image: url(../img/log-register.jpg);
     background-size: cover;
     background-position: center;
-    & header{
-        height: 8vh;
-        padding: 30px;
-        .logo {
-            font-weight: 900;
-            font-size: 2rem;
-            & a {
-                text-decoration: none;
-                color: #fff;
-            }
+}
+header{
+    height: 8vh;
+    padding: 30px;
+    .logo {
+        font-weight: 900;
+        font-size: 2rem;
+        & a {
+            text-decoration: none;
+            color: #fff;
         }
     }
+}
 
-    & main .container {
+main {
+    .container {
         margin: 0 auto;
         display: flex;
         flex-direction: column;
@@ -53,11 +55,11 @@
                 color:rgb(255, 255, 255);
             }
             .error input:not(.check,.boton),.error select{
-                border: 1px solid #ff0000;
+                border: 2px solid #ff0000;
             }
             .error-text{
                 color: #ff0000;
-                font-size: 0.8rem;
+                font-size: 0.9rem;
                 margin-top:0px;
                 margin-bottom: 10px;
             }
@@ -96,6 +98,7 @@
         }  
     }
 }
+
 
 
 

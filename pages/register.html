@@ -20,17 +20,27 @@
             
             <form action="get">
                 <h2>Registro</h2>
-                <input type="text" name="name" id="name" placeholder="Nombre">
-                <br>
-                <input type="text" name="surname" id="surname" placeholder="Apellido">
-                <br>
-                <input type="email" name="email" id="email" placeholder="Email">
-                <br>
-                <input type="password" name="password" id="password" placeholder="Contraseña">
-                <br>
-                <input type="date" name="date" id="date">
-                <br>
-                <div class="countrys">
+                <div>
+                    <input type="name" name="name" id="name" placeholder="Nombre">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="surname" name="surname" id="surname" placeholder="Apellido">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <div class="error-text"></div>
+                </div>                
+                <div>
+                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                    <div class="error-text"></div>
+                </div>
+                <div>
+                    <input type="date" name="date" id="date">
+                    <div class="error-text"></div>
+                </div>
+                <div>
                     <select name="country" id="country">
                         <option value>País</option>
                         <option value="Ar">Argentina</option>
@@ -40,16 +50,19 @@
                         <option value="Co">Colombia</option>
                         <option value="Ec">Ecuador</option>
                     </select>
+                    <div class="error-text"></div>
                 </div>
                 <div class="terminos">
-                    <input class="check" type="checkbox" name="checkbox" id="terminos"> 
+                    <input type="checkbox" class="check" name="checkbox" id="terminos"> 
                     <label for="terminos" class="textoCheck">Acepto términos y condiciones</label>
+                    <div class="error-text"></div>
                 </div>
                 <div>
-                    <input type="submit" value="Registrarse" class="boton">   
+                    <input type="submit" value="Registrarse" class="boton">  
                 </div>
             </form>
         </div>
     </main>
+    <script src="../js/login.js"></script>
 </body>
 </html>
