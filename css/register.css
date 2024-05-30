@@ -26,78 +26,87 @@ header{
     }
 }
 
-main {
-    .container {
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #2a2a2a;
-        width: 30%;
-        height: 90vh;
-        padding: 40px 20px;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        & form{
-            width: 100%;
-            padding:40px;
-            input:not(.check,.boton),select{
-                width: 100%;
-                margin-bottom: 10px;
-                height: 40px;
-                padding: 0px 20px;
-                font-size: 1.2rem;
-                border-radius: 20px;
-                border: 2px solid #9f3647;
-                background-color: #333333;
-                outline: none;
-                color:rgb(255, 255, 255);
-            }
-            .error input:not(.check,.boton),.error select{
-                border: 2px solid #ff0000;
-            }
-            .error-text{
-                color: #ff0000;
-                font-size: 0.9rem;
-                margin-top:0px;
-                margin-bottom: 10px;
-            }
-            .terminos{
-                font-size: 0.8rem;
-                display: flex;
-                align-items: center;
-                margin-bottom: 20px;
-                .textoCheck{
-                    color: #fff;
-                    margin-left: 0;
-                }
-            }
-            .boton{
-                width: 87%;
-                box-sizing: content-box;
-                background-color:#9f3647;
-                border: 2px solid #9f3647;
-                color: #ffffff;
-                padding: 1rem 1rem;
-                border-radius: 5px;
-                font-size: 1rem;
-                font-weight: 500;
-                transition: all .6s;
-                &:hover {
-                    cursor: pointer;
-                    transform: scale(0.95);
-                }
-            }
-            & h2 {
-                font-size: 2.5rem;
-                font-weight: 700;
-                margin-bottom: 20px;
-                color: #fff;
-            }
-        }  
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a;
+    width: 30%;
+    height: 90vh;
+    padding: 40px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+form{
+    width: 100%;
+    padding:40px;
+}
+
+input:not(.check,.boton),select{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 0px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #9f3647;
+    background-color: #333333;
+    outline: none;
+    color:rgb(255, 255, 255);
+}
+
+.error input:not(.check,.boton),.error select{
+    border: 2px solid #ff0000;
+}
+
+.error-text{
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top:0px;
+    margin-bottom: 10px;
+}
+
+.terminos{
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .textoCheck{
+        color: #fff;
+        margin-left: 0;
     }
 }
+
+.boton{
+    width: 87%;
+    box-sizing: content-box;
+    background-color:#9f3647;
+    border: 2px solid #9f3647;
+    color: #ffffff;
+    padding: 1rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all .6s;
+    &:hover {
+        cursor: pointer;
+        transform: scale(0.95);
+    }
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+
+
 
 
 
