@@ -61,7 +61,7 @@ input:not(.btn, a){
     padding: 0 20px;
     font-size: 1.2rem;
     background-color: #333333;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     border: 2px solid #9f3647;
     border-radius: 20px;
 }

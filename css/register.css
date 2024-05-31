@@ -52,7 +52,7 @@ form{
 
 input:not(.check,.boton),select{
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     height: 40px;
     padding: 0px 20px;
     font-size: 1.2rem;
@@ -70,7 +70,8 @@ input:not(.check,.boton),select{
 .error-text{
     color: #ff0000;
     font-size: 0.9rem;
-    margin-top:0px;
+    padding-top: 0px;
+    margin-top: 0px;
     margin-bottom: 10px;
 }
 
