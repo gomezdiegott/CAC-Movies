@@ -19,7 +19,7 @@ function dibujarDatos(json) {
 }
 
 function pelicula(obj) {
-    return `<div class="peli">
+    return `<div class="peli" data-aos="fade-up">
         <img src="https://image.tmdb.org/t/p/w500/${obj.poster_path}" alt="${obj.title}">
             <div class="overlay">
                 <div class="texto">${obj.title}</div>
