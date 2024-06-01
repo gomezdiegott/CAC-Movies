@@ -42,7 +42,7 @@ header {
     height: 10vh;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 header nav {
@@ -154,7 +154,7 @@ main .banner .btn-register {
     border-radius: 7px;
     transition: 0.3s;
     cursor: pointer;
-    z-index: 100;
+    z-index: 90;
 }
 main .banner button:hover {
     background-color: #9f3647;
