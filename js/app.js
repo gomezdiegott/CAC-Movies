@@ -9,8 +9,13 @@ function llamarApi(page) {
             Authorization: `Bearer ${API_KEY}`,
         },
     })
-    .then(response => response.json())
-    .then(data => dibujarDatos(data));
+        .then(response => response.json())
+        .then(data => {
+            dibujarDatos(data)
+            //ejecuto aca getIDCard() para que se ejecute luego de que se cargue
+            //toda la informacion optenida
+            getIDCard()
+        });
 }
 
 function dibujarDatos(json) {
@@ -19,12 +24,12 @@ function dibujarDatos(json) {
 }
 
 function pelicula(obj) {
-    return `<div class="peli" data-aos="fade-up">
+    return `<a href="../pages/pageMovie.html" id="${obj.id}" class="peli" data-aos="fade-up">
         <img src="https://image.tmdb.org/t/p/w500/${obj.poster_path}" alt="${obj.title}">
             <div class="overlay">
                 <div class="texto">${obj.title}</div>
             </div>
-        </div>`;
+        </a>`;
 }
 
 // Siguiente pagina
@@ -53,8 +58,11 @@ function aclamadasApi() {
             Authorization: `Bearer ${API_KEY}`,
         },
     })
-    .then(response => response.json())
-    .then(data => datosAclamadas(data));
+        .then(response => response.json())
+        .then(data => {
+            datosAclamadas(data)
+            getIDCard()
+        });
 }
 
 function datosAclamadas(json) {
@@ -63,13 +71,20 @@ function datosAclamadas(json) {
 }
 
 function peliculaAclamada(obj) {
-    return `<div class="peli">
+    return `<a href="../pages/pageMovie.html" id="${obj.id}" class="peli">
         <img src="https://image.tmdb.org/t/p/w500//${obj.poster_path}" alt="${obj.title}">
             <div class="overlay">
                 <div class="texto">${obj.title}</div>
             </div>
-        </div>`;
+        </a>`;
 }
 
 aclamadasApi();
 
+function getIDCard() {
+    const pelis = document.querySelectorAll('.peli')
+    pelis.forEach(peli => peli.addEventListener('click', () => {
+        /* le paso el id de la pelicula para usarlo en el pageMovie.js */
+        sessionStorage.setItem('idMovie',peli.id)
+    }))
+}
