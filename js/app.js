@@ -24,7 +24,7 @@ function dibujarDatos(json) {
 }
 
 function pelicula(obj) {
-    return `<a href="./pages/pageMovie.html" id="${obj.id}" class="peli" data-aos="fade-up">
+    return `<a href="./CAC-Movies/pages/pageMovie.html" id="${obj.id}" class="peli" data-aos="fade-up">
         <img src="https://image.tmdb.org/t/p/w500/${obj.poster_path}" alt="${obj.title}">
             <div class="overlay">
                 <div class="texto">${obj.title}</div>
@@ -71,7 +71,7 @@ function datosAclamadas(json) {
 }
 
 function peliculaAclamada(obj) {
-    return `<a href="./pages/pageMovie.html" id="${obj.id}" class="peli">
+    return `<a href="./CAC-Movies/pages/pageMovie.html" id="${obj.id}" class="peli">
         <img src="https://image.tmdb.org/t/p/w500//${obj.poster_path}" alt="${obj.title}">
             <div class="overlay">
                 <div class="texto">${obj.title}</div>
