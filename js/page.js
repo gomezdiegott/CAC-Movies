@@ -18,10 +18,10 @@ function dibujarBanner(json) {
     let banner= crearBanner(json)
     document.querySelector('.bannerMovie').innerHTML = banner;
     
-}/* https://image.tmdb.org/t/p/original/${movie.backdrop_path} */
+}
 function crearBanner(movie) {
     return `
-    <img src="" alt="">
+    <img src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}" alt="">
     <div>
           <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="" />
           <div class="detalles">
