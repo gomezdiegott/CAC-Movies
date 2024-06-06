@@ -1,63 +1,58 @@
 
 const API_KEY = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMDIxMTk5OGEwMWIxMGM1MDk5OGE1YTBkODI3NzI0MSIsInN1YiI6IjY2NTczNjFjODZjYzJiNzJkZjFjZjI5MyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3SxeWj4H5Sfe_B2MkiY2fXzXNeFH02UDlH3XVo5N-qI';
 const API_URL = 'https://api.themoviedb.org/3';
+const idioma = "es-MX";
 
-const idioma="es-MX";
-
-function llamarApi(id){
+function llamarApi(id) {
     fetch(`${API_URL}/movie/${id}?language=${idioma}`, {
         headers: {
             Authorization: `Bearer ${API_KEY}`,
         },
     })
     .then(response => response.json())
-    .then(data => dibujarBanner(data));
+    .then(data => dibujarBanner(data))
+    .catch(error => console.error('Error:', error));
 }
 
 function dibujarBanner(json) {
-    let banner= crearBanner(json)
-    document.querySelector('.bannerMovie').innerHTML = banner;
-    
+    let bannerHTML = crearBanner(json);
+    document.querySelector('.bannerMovie').innerHTML = bannerHTML;
+    document.querySelector('.banner-background').style.backgroundImage = `url(https://image.tmdb.org/t/p/original/${json.backdrop_path})`;
 }
+
 function crearBanner(movie) {
     return `
-    <img src="https://image.tmdb.org/t/p/original/${movie.backdrop_path}" alt="">
-    <div>
-          <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="" />
-          <div class="detalles">
-            <h2 class="resaltador">${movie.title}</h2>
-            <div>
-              <p class="resaltador">${movie.overview}</p>
+    <div class="banner-background">
+        <div class="banner-content">
+            <div class="peli-img">
+                <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="" />
             </div>
-            <div class="masDetalles">
-              <ul class="resaltador">
-                <li>Genero</li>
-                ${obtenerGeneros(movie)}
-              </ul>
-              <ul class="resaltador">
-                <li>Fecha de lansamiento : ${movie.release_date}</li>
-              </ul>
-              <ul class="resaltador">
-                <li>Votos :</li>
-                <li>${movie.vote_average}</li>
-              </ul>
-              <ul class="resaltador">
-                <li>Duracion :</li>
-                <li>${movie.runtime}</li>
-              </ul>
+            <div class="detalles">
+                <h2 class="resaltador">${movie.title}</h2>
+                <div>
+                    <p class="resaltador">${movie.overview}</p>
+                </div>
+                <div class="masDetalles">
+                    <ul class="resaltador">
+                        <li>Género: </li>
+                        <li>${movie.genres.map(genero => `<li>${genero.name.trim()}</li>`).join(',')}</li>
+                    </ul>
+                    <ul class="resaltador">
+                        <li>Fecha de lanzamiento: ${movie.release_date}</li>
+                    </ul>
+                    <ul class="resaltador">
+                        <li>Votos:</li>
+                        <li>${movie.vote_average}</li>
+                    </ul>
+                    <ul class="resaltador">
+                        <li>Duración:</li>
+                        <li>${movie.runtime} minutos</li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </div>
+    </div>
     `;
 }
-//falta mostrar los generos
-const obtenerGeneros=(json)=>{
-    json.genres.forEach(genero=>{
-        return `<li>${genero.name}</li>`
-    })
 
-}
 llamarApi(sessionStorage.getItem('idMovie'))
-
-// b51f92fb25219c57dbe48d8fd2100fdd    
-// eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTFmOTJmYjI1MjE5YzU3ZGJlNDhkOGZkMjEwMGZkZCIsInN1YiI6IjY2NWIzNDAxZDQ5M2FmYjU2ODU5MzE0YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZPpjx8AqjYlpq0YJ6F1gh5hgxSvQcGJck_PIaX8BuEM
