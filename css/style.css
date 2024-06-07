@@ -107,6 +107,13 @@ header nav ul li .iniciarSesion {
     flex-direction: column;
     row-gap: 20px;
     padding: initial;
+    ul{
+      padding: 0;
+      gap: 0.3rem;
+      li{
+        margin: 0;
+      }
+    }
   }
   header nav ul li a {
     font-weight: 400;
