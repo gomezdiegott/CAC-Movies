@@ -527,58 +527,67 @@ footer nav ul li a {
     margin-bottom: 20px;
   }
 }
+
+
+
 /* Pagina de la pelicula */
 main .bannerMovie {
-  font-weight: 600;
-  overflow: hidden;
   height: 90vh;
+  font-weight: 600;
+}
+
+.bannerMovie .banner-background {
+  padding-top:50px;
   position: relative;
-  ul{
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-background .banner-content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  column-gap: 60px;
+  color: #fff;
+}
+
+.banner-content .peli-img {
+  width: 200px;
+  height: 300px;
+  & img {
+    width: 200px;
+    height: 300px;
+    border-radius: 9px;
+  }
+}
+
+.banner-content .detalles {
+
+  & h2 {
+    background-color: #000000a2;
+    position: relative;
+  }
+  & div p {
+    background-color: #000000a2;
+    position: relative;
+  }
+}
+.detalles .masDetalles {
+  margin-top:20px;
+  columns: 2;
+  & ul {
     list-style: none;
-  }
-  &>img{
-    opacity: 0.5;
-    width: 100%;
-  }
-  & > div {
+    background-color: #000000a2;
+    padding: 0 1%;
+    position: relative;
     display: flex;
-    position: absolute;
-    left: 10%;
-    top: 20%;
-    width: 80%;
-    img {
-      height: 300px;
-    }
-    .detalles {
-      margin-left: 5%;
-      color: white;
-      display: flex;
-      flex-direction: column;
-    justify-content: center;
-      h2 {
-        position: relative;
-        background-color: #000000a2;
-        padding: 1%;
-      }
-      p {
-        position: relative;
-        background-color: #000000a2;
-        padding: 1%;
-      }
-      .masDetalles {
-        width: 100%;
-        columns: 2;
-        ul{
-          background-color: #000000a2;
-          padding: 0 1%;
-          position: relative;
-          margin-bottom: 1%;
-          display: flex;
-          flex-wrap: wrap;
-          gap: 2%;
-        }
-      }
-    }
+    flex-wrap: wrap;
+    gap: 2%;
   }
 }
 
@@ -591,4 +600,18 @@ main .bannerMovie {
   width: 5px;
   height: 100%;
   content: "";
+}
+
+
+@media (max-width: 1000px) {
+  .bannerMovie .banner-background {
+    height: initial;
+  }
+  .banner-background .banner-content {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .detalles .masDetalles {
+    columns: 1;
+  }
 }
