@@ -39,11 +39,11 @@ function crearBanner(movie) {
               </ul>
               <ul class="resaltador">
                 <li>Votos :</li>
-                <li>${movie.vote_average}</li>
+                <li>${parseInt(movie.vote_average)}/10</li>
               </ul>
               <ul class="resaltador">
                 <li>Duracion :</li>
-                <li>${movie.runtime}</li>
+                <li>${movie.runtime}m</li>
               </ul>
             </div>
           </div>
