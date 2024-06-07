@@ -54,5 +54,5 @@ function crearBanner(movie) {
     </div>
     `;
 }
-
+      
 llamarApi(sessionStorage.getItem('idMovie'))
