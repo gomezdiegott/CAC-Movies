@@ -65,6 +65,8 @@ header nav ul {
   display: flex;
   /* flex-flow: row nowrap; */
   align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
 }
 
 header nav ul li {
@@ -98,27 +100,29 @@ header nav ul li .iniciarSesion {
 
 /* Header para celular */
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   header {
     height: initial;
   }
   header nav {
     margin: 0 10px;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 15px;
     padding: initial;
-    ul{
-      padding: 0;
-      gap: 0.3rem;
-      li{
-        margin: 0;
-      }
-    }
+    justify-content: center;
+    align-items: center;
+  }
+  header nav ul {
+    padding: 0;
+    padding-bottom: 0.3rem;
+  }
+  header nav ul li {
+    margin-right: 10px;
   }
   header nav ul li a {
     font-weight: 400;
     margin-right: initial;
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0.2rem;
   }
 }
@@ -484,7 +488,7 @@ main .inicio a {
 
 footer {
   background-color: #9f3647;
-  padding: 3.2rem;
+  padding: 3rem;
 }
 
 footer nav {
@@ -536,17 +540,18 @@ footer nav ul li a {
 }
 
 
-
 /* Pagina de la pelicula */
+/* Section de peliculas */
 main .bannerMovie {
-  height: 90vh;
   font-weight: 600;
+  min-height: 90vh;
 }
 
 .bannerMovie .banner-background {
-  padding-top:50px;
+  padding-top: 50px;
   position: relative;
-  height: 90vh;
+  height: auto;
+  min-height: 70vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -557,45 +562,45 @@ main .bannerMovie {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
   column-gap: 60px;
   color: #fff;
 }
 
 .banner-content .peli-img {
-  width: 200px;
-  height: 300px;
-  & img {
-    width: 200px;
-    height: 300px;
-    border-radius: 9px;
-  }
+  width: 300px;
+  height: 450px;
+}
+.banner-content .peli-img img {
+  width: 300px;
+  height: 450px;
+  border-radius: 9px;
+  overflow: clip;
 }
 
-.banner-content .detalles {
-
-  & h2 {
-    background-color: #000000a2;
-    position: relative;
-  }
-  & div p {
-    background-color: #000000a2;
-    position: relative;
-  }
+.banner-content .detalles h2 {
+  background-color: #000000a2;
+  position: relative;
 }
+
+.banner-content .detalles div p {
+  background-color: #000000a2;
+  position: relative;
+}
+
 .detalles .masDetalles {
-  margin-top:20px;
+  margin-top: 20px;
   columns: 2;
-  & ul {
-    list-style: none;
-    background-color: #000000a2;
-    padding: 0 1%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2%;
-  }
+}
+.detalles .masDetalles ul {
+  list-style: none;
+  background-color: #000000a2;
+  padding: 0 1%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
 }
 
 .resaltador::before {
@@ -609,16 +614,81 @@ main .bannerMovie {
   content: "";
 }
 
+/* --------- */
+/* Section de Trailer de peliculas */
+.section-dos {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  height: 70vh;
+}
 
+.trailer h2 {
+  margin-bottom: 20px;
+}
+
+.video-container {
+  position: relative;
+  width: 40vw;
+  padding-bottom: 56.25%; 
+  height: 40vh;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.info-trailer {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  & h2 {
+    margin-bottom: 40px;
+    background-color: #9f3647;
+  }
+  .masDetalles {
+    columns: 2;
+    & ul {
+      list-style: none;
+    }
+  }
+}
+
+
+/* ------------ */
+/* Pagina de la pelicula para celu */
 @media (max-width: 1000px) {
-  .bannerMovie .banner-background {
+  .bannerMovie {
     height: initial;
   }
+  .bannerMovie .banner-background {
+    height: auto; 
+    min-height: 90vh; 
+  }
+
   .banner-background .banner-content {
     flex-direction: column;
     row-gap: 20px;
   }
+
   .detalles .masDetalles {
     columns: 1;
+  }
+
+  .section-dos {
+    flex-direction: column;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .video-container {
+    width: 100%;
+    max-width: none;
+    padding-bottom: 56.25%;
+    margin-bottom: 20px;
   }
 }

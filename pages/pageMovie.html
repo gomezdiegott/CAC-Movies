@@ -9,8 +9,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> -->
-    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="shortcut icon" href="../img/icon.png" type="image/x-icon" />
     <title>C & D - Pelicula</title>
@@ -34,8 +34,39 @@
       <section class="bannerMovie">
        <!-- pageMovie -->
       </section>
+      <section class="section-dos" data-aos="fade-up" data-aos-duration="1000">
+        <div class="trailer">
+          <h2>Ver Trailer</h2>
+          <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/Tk7pT51wP-8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="info-trailer">
+          <h2>ICONOS</h2>
+          <h4>Info</h4>
+          <div class="masDetalles">
+            <ul>
+                <li>Género: </li>
+                <li>Fútbol</li>
+            </ul>
+            <ul>
+                <li>Fecha de lanzamiento:</li> 
+                <li>31-05-1986</li>
+            </ul>
+            <ul>
+                <li>Votos:</li>
+                <li>9999999</li>
+            </ul>
+            <ul>
+                <li>Duración:</li>
+                <li>1986 minutos</li>
+            </ul>
+        </div>
+        </div>
+      </section>
+      <button class="inicio"><a href="#inicio"><i class='bx bx-chevron-up bx-md'></i></a></button>
     </main>
-    <!-- <footer>
+    <footer>
       <nav>
           <ul>
               <li><a href="#inicio">Términos y condiciones</a></li>
@@ -44,7 +75,11 @@
               <li><a href="#inicio" class="adm-pelis">Administrador de peliculas</a></li>
           </ul>
       </nav>
-    </footer> -->
+    </footer>
     <script src="../js/pageMovie.js" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
   </body>
 </html>
